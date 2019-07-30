@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Welcome!</title> 
+        <title>Welcome!</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="/static/style.css" type="text/css" />
     </head>
@@ -46,16 +46,17 @@
             </div>
             <div>
                
-                <p>Start your game here:</p>
-                <form method= "post" action="/shares">
-                    
-                    Stock symbol:
-                    <input type="text" name="symbol" />
-                   <br> Year buying: 
-                    <input type="text" name="yearbuying"/> 
-                    <br> Balance you're starting with:
-                    <input type="text" name="Balance" /> 
+                <p> With your balance you can buy {{all_shares}} shares of stock {{symbol}}. </p>
+                <form method= "post" action="/finalbalance">
+                    <br>Year Selling:<input type="text" name="yearselling"/> </br>
+                    <input type="hidden" value={{initial_year}} name="initial_year">
+                    <input type = "hidden" value={{all_shares}} name="all_shares">
+                    <input type = "hidden" value={{symbol}} name="symbol">
+                    <input type = "hidden" value={{initial_balance}} name="initial_balance">
+                    <br> How many shares do you want to buy? <input type = "text" name = "shares"></br>
                     <br> <input type="submit" value="Submit"/> </br>
+                    
+                    
                 </form>
             </div>
         </div>

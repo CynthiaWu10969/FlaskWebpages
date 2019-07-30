@@ -7,7 +7,7 @@
     <body>
         <!--image-->
         <div class="Title">
-             <h1>Stocks and Climate Change Stimulator</h1>
+             <h1>Stocks and Climate Change Simulator</h1>
         </div>
         <div class="container">
             <div>
@@ -46,17 +46,9 @@
             </div>
             <div>
                
-                <p>Start your game here:</p>
-                <form method= "post" action="/shares">
-                    
-                    Stock symbol:
-                    <input type="text" name="symbol" />
-                   <br> Year buying: 
-                    <input type="text" name="yearbuying"/> 
-                    <br> Balance you're starting with:
-                    <input type="text" name="Balance" /> 
-                    <br> <input type="submit" value="Submit"/> </br>
-                </form>
+               <p> After you invested in the stock: {{symbol}}, your balance is now: {{finalbalance}}
+               </p>
+               
             </div>
         </div>
     </body>

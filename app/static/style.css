@@ -1,0 +1,7 @@
+.container{
+    display: grid; 
+    grid-template-columns: 50% 50%;
+}
+.Title{
+    text-align:center;
+}
