@@ -13,6 +13,7 @@
             <div>
                 <table style="width:100%">
                   <tr>
+            <h4>Some stock examples are:</h4>
                     <th>Stock Name</th>
                     <th>Symbol</th> 
                   
@@ -48,11 +49,13 @@
                
                 <p>Start your game here:</p>
                 <form method= "post" action="/shares">
-                    
                     Stock symbol:
                     <input type="text" name="symbol" />
-                   <br> Year buying: 
-                    <input type="text" name="yearbuying"/> 
+                    <br>Choose a week to buy: (Please select a Friday!)
+                    <label for="week"> </label>
+                    <input type="date" name="day" id="camp-week"
+                     min="1998-01-01" max="2019-07-26" required>
+                     <br>
                     <br> Balance you're starting with:
                     <input type="text" name="Balance" /> 
                     <br> <input type="submit" value="Submit"/> </br>

@@ -48,8 +48,12 @@
                
                 <p> With your balance you can buy {{all_shares}} shares of stock {{symbol}}. </p>
                 <form method= "post" action="/finalbalance">
-                    <br>Year Selling:<input type="text" name="yearselling"/> </br>
-                    <input type="hidden" value={{initial_year}} name="initial_year">
+                    <br>Choose a week to sell: (Please select a Friday!)
+                    <label for="week"> </label>
+                    <input type="date" name="sell_day" id="camp-week"
+                     min="1998-01-01" max="2019-07-31" required>
+                     <br>
+                    <input type="hidden" value={{initial_day}} name="initial_day">
                     <input type = "hidden" value={{all_shares}} name="all_shares">
                     <input type = "hidden" value={{symbol}} name="symbol">
                     <input type = "hidden" value={{initial_balance}} name="initial_balance">
